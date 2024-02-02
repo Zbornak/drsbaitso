@@ -18,19 +18,21 @@ struct ContentView: View {
             VStack {
                 HStack {
                     Text("Sound Blaster").padding(.leading)
-                    Text("D R  S B A I T S O").padding()
+                    Text("D R  S B A I T S O").foregroundColor(.yellow).padding()
                     Text("version 27.30").padding()
                 }
                 
                 HStack {
-                    Text("(c) Copyright Creative Labs, Inc. 2024, all rights reserved").padding()
-                        .border(.white, width: 2)
+                    Text("(c) Copyright Creative Labs, Inc. 2024,").foregroundColor(.green).padding()
+                    Text("all rights reserved").padding(.trailing)
+                        
                 }
+                .border(.white, width: 2)
                     
             }
             .border(.white, width: 2)
             .foregroundStyle(.white)
-            .font(.caption)
+            .font(.custom("Flexi_IBM_VGA_True", size: 13))
         }
     }
 }

@@ -12,6 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
+            
             Rectangle()
                 .fill(Color(red: 0.0, green: 0.0, blue: 1.0))
                 .ignoresSafeArea()
@@ -28,11 +29,16 @@ struct ContentView: View {
                         
                 }
                 .border(.white, width: 2)
-                    
             }
             .border(.white, width: 2)
             .foregroundStyle(.white)
             .font(.custom("Flexi_IBM_VGA_True", size: 13))
+            
+            VStack {
+                NameView()
+                    .frame(maxWidth: .infinity)
+            }
+            .padding(.top, 100)
         }
     }
 }

@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var userInput = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Rectangle()
+                .fill(Color(red: 0.0, green: 0.0, blue: 1.0))
+                .ignoresSafeArea()
+            VStack {
+                HStack {
+                    Text("Sound Blaster")
+                    Text("D R  S B A I T S O")
+                    Text("version 27.30")
+                }
+                Text("(c) Copyright Creative Kabs, Inc. 2024, all rights reserved")
+            }
+            .foregroundStyle(.white)
+            .padding()
         }
-        .padding()
     }
 }
 

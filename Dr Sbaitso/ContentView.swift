@@ -11,20 +11,26 @@ struct ContentView: View {
     @State private var userInput = ""
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             Rectangle()
                 .fill(Color(red: 0.0, green: 0.0, blue: 1.0))
                 .ignoresSafeArea()
             VStack {
                 HStack {
-                    Text("Sound Blaster")
-                    Text("D R  S B A I T S O")
-                    Text("version 27.30")
+                    Text("Sound Blaster").padding(.leading)
+                    Text("D R  S B A I T S O").padding()
+                    Text("version 27.30").padding()
                 }
-                Text("(c) Copyright Creative Kabs, Inc. 2024, all rights reserved")
+                
+                HStack {
+                    Text("(c) Copyright Creative Labs, Inc. 2024, all rights reserved").padding()
+                        .border(.white, width: 2)
+                }
+                    
             }
+            .border(.white, width: 2)
             .foregroundStyle(.white)
-            .padding()
+            .font(.caption)
         }
     }
 }

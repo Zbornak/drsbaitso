@@ -19,6 +19,7 @@
 		DB1604212B6D0734002E182B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB1604232B6D0735002E182B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1604262B6D0735002E182B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB16042D2B6D265F002E182B /* CP437.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CP437.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 			children = (
 				DB16041F2B6D0734002E182B /* Dr_SbaitsoApp.swift */,
 				DB1604212B6D0734002E182B /* ContentView.swift */,
+				DB16042D2B6D265F002E182B /* CP437.ttf */,
 				DB1604232B6D0735002E182B /* Assets.xcassets */,
 				DB1604252B6D0735002E182B /* Preview Content */,
 			);

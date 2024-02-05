@@ -60,6 +60,9 @@ struct NameView: View {
                             }
                         }
                     }
+                    .padding()
+                    .border(.white, width: 2)
+                    .padding()
                 }
                 
                 Text("HELLO \(userName == "" ? "ANON" : userName.uppercased()), MY NAME IS DOCTOR SBAITSO.").opacity(showingLine1 ? 1: 0)

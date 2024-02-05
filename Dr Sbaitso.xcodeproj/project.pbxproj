@@ -11,6 +11,7 @@
 		DB1604222B6D0734002E182B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1604212B6D0734002E182B /* ContentView.swift */; };
 		DB1604242B6D0735002E182B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1604232B6D0735002E182B /* Assets.xcassets */; };
 		DB1604272B6D0735002E182B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1604262B6D0735002E182B /* Preview Assets.xcassets */; };
+		DB8422F82B711F030003C4C3 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8422F72B711F030003C4C3 /* UserInputView.swift */; };
 		DB9CACDB2B6D2E5E00480575 /* Flexi_IBM_VGA_True.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB9CACDA2B6D2E5E00480575 /* Flexi_IBM_VGA_True.ttf */; };
 		DB9CACDD2B6D30C000480575 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9CACDC2B6D30C000480575 /* NameView.swift */; };
 /* End PBXBuildFile section */
@@ -21,6 +22,7 @@
 		DB1604212B6D0734002E182B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB1604232B6D0735002E182B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1604262B6D0735002E182B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB8422F72B711F030003C4C3 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		DB9CACD32B6D2C3300480575 /* Dr-Sbaitso-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Dr-Sbaitso-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DB9CACDA2B6D2E5E00480575 /* Flexi_IBM_VGA_True.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Flexi_IBM_VGA_True.ttf; sourceTree = "<group>"; };
 		DB9CACDC2B6D30C000480575 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				DB16041F2B6D0734002E182B /* Dr_SbaitsoApp.swift */,
 				DB1604212B6D0734002E182B /* ContentView.swift */,
 				DB9CACDC2B6D30C000480575 /* NameView.swift */,
+				DB8422F72B711F030003C4C3 /* UserInputView.swift */,
 				DB9CACDA2B6D2E5E00480575 /* Flexi_IBM_VGA_True.ttf */,
 				DB1604232B6D0735002E182B /* Assets.xcassets */,
 				DB1604252B6D0735002E182B /* Preview Content */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB8422F82B711F030003C4C3 /* UserInputView.swift in Sources */,
 				DB1604222B6D0734002E182B /* ContentView.swift in Sources */,
 				DB9CACDD2B6D30C000480575 /* NameView.swift in Sources */,
 				DB1604202B6D0734002E182B /* Dr_SbaitsoApp.swift in Sources */,

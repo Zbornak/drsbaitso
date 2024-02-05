@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var userInput = ""
+    @State private var userInputs = [String]()
     
     var body: some View {
         ZStack(alignment: .top) {

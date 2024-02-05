@@ -9,7 +9,11 @@ import SwiftUI
 
 struct UserInputView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle()
+                .fill(Color(red: 1.0, green: 0.0, blue: 0.0))
+            Text("User Input")
+        }
     }
 }
 

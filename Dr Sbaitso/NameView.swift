@@ -9,6 +9,12 @@ import SwiftUI
 
 struct NameView: View {
     @State private var userName = ""
+    @State private var showingLine1 = false
+    @State private var showingLine2 = false
+    @State private var showingLine3 = false
+    @State private var showingLine4 = false
+    @State private var showingLine5 = false
+    @State private var showingButton = false
     
     var body: some View {
         ZStack {
@@ -17,20 +23,49 @@ struct NameView: View {
             
             VStack(alignment: .leading) {
                 Text("Please enter your name...")
-                TextField("", text: $userName)
-                    .padding()
-                    .border(.white, width: 2)
-                    .padding()
-                
-                Text("HELLO \(userName.uppercased()), MY NAME IS DOCTOR SBAITSO.")
+                HStack {
+                    TextField("", text: $userName)
+                        .padding()
+                        .border(.white, width: 2)
+                        .padding()
+                    Button("ok") {
+                        withAnimation {
+                            showingLine1 = true
+                        } completion: {
+                            withAnimation(Animation.default.delay(3)) {
+                                showingLine2 = true
+                            } completion: {
+                                withAnimation(Animation.default.delay(3)) {
+                                    showingLine3 = true
+                                } completion: {
+                                    withAnimation(Animation.default.delay(3)) {
+                                        showingLine4 = true
+                                    } completion: {
+                                        withAnimation(Animation.default.delay(3)) {
+                                            showingLine5 = true
+                                        } completion: {
+                                            withAnimation(Animation.default.delay(3)) {
+                                                showingButton = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                Text("HELLO \(userName == "" ? "ANON" : userName.uppercased()), MY NAME IS DOCTOR SBAITSO.").opacity(showingLine1 ? 1: 0)
                 Text("")
-                Text("SAY WHATEVER IS IN YOUR MIND FREELY,")
-                Text("OUR CONVERSATION WILL BE KEPT IN STRICT CONFIDENCE.")
-                Text("MEMORY CONTENTS WILL BE WIPED OFF AFTER YOU LEAVE,")
+                Text("SAY WHATEVER IS IN YOUR MIND FREELY,").opacity(showingLine2 ? 1 : 0)
+                Text("OUR CONVERSATION WILL BE KEPT IN STRICT CONFIDENCE.").opacity(showingLine3 ? 1 : 0)
+                Text("MEMORY CONTENTS WILL BE WIPED OFF AFTER YOU LEAVE,").opacity(showingLine4 ? 1 : 0)
                 Text("")
-                Text("SO, TELL ME ABOUT YOUR PROBLEMS.")
+                Text("SO, TELL ME ABOUT YOUR PROBLEMS.").opacity(showingLine5 ? 1 : 0)
                 Text("")
-                Text(">_")
+                Button(">_ CLICK HERE") {
+                    //show InputView
+                }.opacity(showingButton ? 1 : 0)
             }
             .foregroundStyle(.white)
             .font(.custom("Flexi_IBM_VGA_True", size: 16))

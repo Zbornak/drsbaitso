@@ -17,6 +17,7 @@ struct NameView: View {
     @State private var showingLine5 = false
     @State private var showingButton = false
     @State private var synthesizer = AVSpeechSynthesizer()
+    @Binding var switchToInputView: Bool
     
     var body: some View {
         ZStack {
@@ -73,8 +74,8 @@ struct NameView: View {
                 Text("")
                 Text("SO, TELL ME ABOUT YOUR PROBLEMS.").opacity(showingLine5 ? 1 : 0)
                 Text("")
-                Button(">_ CLICK HERE") {
-                    //show InputView
+                Button("CLICK HERE TO CONTINUE") {
+                    switchToInputView = true
                 }.opacity(showingButton ? 1 : 0)
             }
             .foregroundStyle(.white)
@@ -91,5 +92,5 @@ struct NameView: View {
 }
 
 #Preview {
-    NameView()
+    NameView(switchToInputView: .constant(false))
 }

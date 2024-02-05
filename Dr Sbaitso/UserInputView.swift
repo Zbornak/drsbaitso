@@ -50,8 +50,9 @@ struct UserInputView: View {
             .padding()
         }
         .alert("", isPresented: $showingUserInputScreen) {
-            TextField("TELL ME YOUR THOUGHTS", text: $userInput)
+            TextField("Enter your thoughts", text: $userInput)
         }
+        .font(.custom("Flexi_IBM_VGA_True", size: 16))
     }
     
     func sayLine(text: String) {

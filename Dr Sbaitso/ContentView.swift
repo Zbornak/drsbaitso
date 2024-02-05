@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var switchToInputView = false
+    
     var body: some View {
         ZStack(alignment: .top) {
             
@@ -33,8 +35,12 @@ struct ContentView: View {
             .font(.custom("Flexi_IBM_VGA_True", size: 13))
             
             VStack {
-                NameView()
-                    .frame(maxWidth: .infinity)
+                if !switchToInputView {
+                    NameView(switchToInputView: $switchToInputView)
+                        .frame(maxWidth: .infinity)
+                } else {
+                    UserInputView()
+                }
             }
             .padding(.top, 100)
         }

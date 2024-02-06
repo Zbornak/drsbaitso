@@ -5,6 +5,7 @@
 //  Created by Mark Strijdom on 05/02/2024.
 //
 
+
 import AVFoundation
 import SwiftUI
 
@@ -31,7 +32,7 @@ struct UserInputView: View {
                     Text(userInput)
                 }
                 
-                Text("{{ DOCTOR SBAITSO'S RESPONSE }}")
+                Text(response)
                 
                 Button("respond") {
                     // show alert with textfield
@@ -39,9 +40,11 @@ struct UserInputView: View {
                     // add user input to inputHistory
                     if userInput != "" {
                         inputHistory.append(userInput)
+                        inputHistory.append(response)
                     }
                     // reset userInput to blank
                     userInput = ""
+                    response = ""
                 }
                 .padding()
                 .border(.white, width: 2)
@@ -53,6 +56,10 @@ struct UserInputView: View {
         }
         .alert("", isPresented: $showingUserInputScreen) {
             TextField("enter your thoughts", text: $userInput)
+            Button("OK") {
+                response = respondTo(userInput)
+                sayLine(text: response)
+            }
         }
         .font(.custom("Flexi_IBM_VGA_True", size: 16))
     }
@@ -61,6 +68,10 @@ struct UserInputView: View {
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.speech.synthesis.voice.Zarvox")
         synthesizer.speak(utterance)
+    }
+    
+    func respondTo(_ text: String) -> String {
+        return "I AM SORRY TO HEAR THAT."
     }
 }
 

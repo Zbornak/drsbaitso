@@ -33,11 +33,13 @@ struct UserInputView: View {
                 
                 Text("{{ DOCTOR SBAITSO'S RESPONSE }}")
                 
-                Button("Respond") {
+                Button("respond") {
                     // show alert with textfield
                     showingUserInputScreen.toggle()
                     // add user input to inputHistory
-                    inputHistory.append(userInput)
+                    if userInput != "" {
+                        inputHistory.append(userInput)
+                    }
                     // reset userInput to blank
                     userInput = ""
                 }
@@ -50,7 +52,7 @@ struct UserInputView: View {
             .padding()
         }
         .alert("", isPresented: $showingUserInputScreen) {
-            TextField("Enter your thoughts", text: $userInput)
+            TextField("enter your thoughts", text: $userInput)
         }
         .font(.custom("Flexi_IBM_VGA_True", size: 16))
     }

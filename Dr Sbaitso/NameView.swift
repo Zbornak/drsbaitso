@@ -74,7 +74,7 @@ struct NameView: View {
                 Text("")
                 Text("SO, TELL ME ABOUT YOUR PROBLEMS.").opacity(showingLine5 ? 1 : 0)
                 Text("")
-                Button("CLICK HERE TO CONTINUE") {
+                Button("tap here to continue") {
                     switchToInputView = true
                 }.opacity(showingButton ? 1 : 0)
             }

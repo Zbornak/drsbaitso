@@ -25,7 +25,7 @@ struct NameView: View {
                 .fill(Color(red: 0.0, green: 0.0, blue: 1.0))
             
             VStack(alignment: .leading) {
-                Text("Please enter your name...")
+                Text("please enter your name...")
                 HStack {
                     TextField("", text: $userName)
                         .padding()

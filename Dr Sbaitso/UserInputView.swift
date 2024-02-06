@@ -15,6 +15,7 @@ struct UserInputView: View {
     @State private var inputHistory = [String]()
     @State private var synthesizer = AVSpeechSynthesizer()
     @State private var showingUserInputScreen = false
+    @State private var cursorOpacity = 1.0
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -27,8 +28,21 @@ struct UserInputView: View {
                 }
                 
                 HStack {
-                    Text(">_")
-                        .padding(.bottom, 5)
+                    HStack {
+                        Text(">")
+                        Text("_")
+                            .padding(.bottom, 5)
+                            .opacity(cursorOpacity)
+                            .onAppear {
+                                let baseAnimation = Animation.easeInOut(duration: 0.5)
+                                let repeated = baseAnimation.repeatForever(autoreverses: true)
+                                
+                                withAnimation(repeated) {
+                                    cursorOpacity = 0.0
+                                }
+                            }
+                    }
+                    
                     Text(userInput)
                 }
                 

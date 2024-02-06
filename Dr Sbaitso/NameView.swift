@@ -74,9 +74,13 @@ struct NameView: View {
                 Text("")
                 Text("SO, TELL ME ABOUT YOUR PROBLEMS.").opacity(showingLine5 ? 1 : 0)
                 Text("")
-                Button("tap here to continue") {
+                Button("tap") {
                     switchToInputView = true
-                }.opacity(showingButton ? 1 : 0)
+                }
+                .padding()
+                .border(.white, width: 2)
+                .padding()
+                .opacity(showingButton ? 1 : 0)
             }
             .foregroundStyle(.white)
             .font(.custom("Flexi_IBM_VGA_True", size: 16))
